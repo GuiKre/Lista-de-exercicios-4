@@ -1,22 +1,37 @@
 package br.edu.up.telas;
 import java.util.Scanner;
+import br.edu.up.modelos.Carro;
 
 public class Menu {
 
-    public void executar(){
-        Scanner leitor = new Scanner(System.in);
+    private Scanner scanner;
+    public void menu(){
+        scanner = new Scanner(System.in);
+    }
+
+    public void exibirMenu(){
         System.out.println("---Menu---");
         System.out.println("1 - Registrar veículos");
         System.out.println("2 - Verificar vagas");
         System.out.println("3 - Buscar veículo");
         System.out.println("4 - Emitir relatório");
+    }
+    public int lerOpcao(){
+        return scanner.nextInt();
+    }
 
-        int opcao = leitor.nextInt();
-        switch (opcao) {
-            case 1: break;
-            case 2: break;
-            case 3: break;
-            case 4: break;
-        }
+    public Carro lerCarro(){
+        System.out.print("Modelo do carro: ");
+        String modelo = scanner.next();
+        System.out.print("Placa do carro: ");
+        String placa = scanner.next();
+        System.out.print("Cor do carro: ");
+        String cor = scanner.next();
+        return new Carro(modelo, placa, cor);
+    }
+
+    public String lerPlaca(){
+        System.out.print("Placa do carro: ");
+        return scanner.next();
     }
 }
