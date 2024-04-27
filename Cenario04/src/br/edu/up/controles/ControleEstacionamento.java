@@ -7,6 +7,7 @@ public class ControleEstacionamento {
     private static int numeroVagas = 10;
     private Carro[] carrosEstacionados;
     private int vagasDisponiveis;
+    private int totalGeral = 0;
 
     public ControleEstacionamento() {
         carrosEstacionados = new Carro[numeroVagas];
@@ -19,6 +20,8 @@ public class ControleEstacionamento {
                 if (carrosEstacionados[i] == null) {
                     carrosEstacionados[i] = carro;
                     vagasDisponiveis--;
+                    totalGeral++;
+
                     return true;
                 }
             }
@@ -51,5 +54,10 @@ public class ControleEstacionamento {
         }
         return total;
     }
+
+    public int getTotalGeral() {
+        return totalGeral;
+    }
+    
 }
 

@@ -4,21 +4,24 @@ import br.edu.up.modelos.Carro;
 
 public class Menu {
 
+    private int opcao;
     private Scanner scanner;
-    public void menu(){
-        scanner = new Scanner(System.in);
-    }
-
+    // public void menu(){
+    // }
+    
     public void exibirMenu(){
-        System.out.println("---Menu---");
+        System.out.println("\n---Menu---");
         System.out.println("1 - Registrar veículos");
-        System.out.println("2 - Buscar veículo");
-        System.out.println("3 - Emitir relatório");
-        System.out.println("4 - Sair");
+        System.out.println("2 - Retirar veículo");
+        System.out.println("3 - Ver vagas");
+        System.out.println("4 - Emitir relatório");
+        System.out.println("5 - Sair\n");
     }
-    public int lerOpcao(){
-        return scanner.nextInt();
+    public void lerOpcao(){
+        scanner = new Scanner(System.in);
+        this.opcao = scanner.nextInt();
     }
+    
 
     public Carro lerCarro(){
         System.out.print("Modelo do carro: ");
@@ -34,4 +37,8 @@ public class Menu {
         System.out.print("Placa do carro: ");
         return scanner.next();
     }
+    public int getOpcao() {
+        return opcao;
+    }
+    
 }
