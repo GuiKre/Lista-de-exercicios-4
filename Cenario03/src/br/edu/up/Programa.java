@@ -1,6 +1,10 @@
 package br.edu.up;
+import br.edu.up.controles.*;
+
 public class Programa {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        
+        CriarCompromisso criarCompromisso = new CriarCompromisso();
+        criarCompromisso.criarCompromisso();
     }
 }

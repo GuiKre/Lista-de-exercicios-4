@@ -40,5 +40,9 @@ public class Menu {
     public int getOpcao() {
         return opcao;
     }
+    public void mostrarOpcoes() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarOpcoes'");
+    }
     
 }
