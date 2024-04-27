@@ -6,8 +6,6 @@ public class Menu {
 
     private int opcao;
     private Scanner scanner;
-    // public void menu(){
-    // }
     
     public void exibirMenu(){
         System.out.println("\n---Menu---");
