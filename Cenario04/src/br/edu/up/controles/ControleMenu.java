@@ -7,6 +7,7 @@ public class ControleMenu {
 
     private ControleEstacionamento estacionamento;
     private Menu menu;
+    private Double precoVaga = 5.0;
 
     public ControleMenu(ControleEstacionamento estacionamento, Menu menu) {
         this.estacionamento = estacionamento;
@@ -40,6 +41,8 @@ public class ControleMenu {
                     System.out.println("Relatório:");
                     System.out.println("Total de carros estacionados: " + estacionamento.getTotalCarrosEstacionados());
                     System.out.println("Vagas disponíveis: " + estacionamento.getVagasDisponiveis());
+                    Double valorPagamento = estacionamento.getTotalCarrosEstacionados() * precoVaga;
+                    System.out.println("Valor de pagamentos: R$" + valorPagamento);
                     break;
                 case 4:
                     System.out.println("Saindo do programa...");
