@@ -12,9 +12,9 @@ public class Menu {
     public void exibirMenu(){
         System.out.println("---Menu---");
         System.out.println("1 - Registrar veículos");
-        System.out.println("2 - Verificar vagas");
-        System.out.println("3 - Buscar veículo");
-        System.out.println("4 - Emitir relatório");
+        System.out.println("2 - Buscar veículo");
+        System.out.println("3 - Emitir relatório");
+        System.out.println("4 - Sair");
     }
     public int lerOpcao(){
         return scanner.nextInt();
