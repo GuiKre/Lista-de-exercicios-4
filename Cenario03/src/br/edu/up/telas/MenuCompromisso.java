@@ -1,7 +1,7 @@
 package br.edu.up.telas;
 import java.util.Scanner;
 
-public class Menu {
+public class MenuCompromisso {
 
     public void mostrarOpcoes(){
         System.out.println("1. Criar compromisso");
