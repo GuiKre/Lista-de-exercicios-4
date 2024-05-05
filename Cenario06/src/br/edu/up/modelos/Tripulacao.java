@@ -7,7 +7,7 @@ public class Tripulacao extends Pessoa {
     
     public Tripulacao() {
     }
-    public Tripulacao(String nome, String rg, Aeronave aeronave, String identicacaoAeronautica, String matriculaFuncionario) {
+    public Tripulacao(String nome, String rg, String aeronave, String identicacaoAeronautica, String matriculaFuncionario) {
         super(nome, rg, aeronave);
         this.identicacaoAeronautica = identicacaoAeronautica;
         this.matriculaFuncionario = matriculaFuncionario;

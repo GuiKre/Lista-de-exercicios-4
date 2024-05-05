@@ -6,7 +6,7 @@ public class Comissario extends Tripulacao{
 
     public Comissario() {
     }
-    public Comissario(String nome, String rg, Aeronave aeronave, String identicacaoAeronautica, String matriculaFuncionario, String[] idiomasFluencia) {
+    public Comissario(String nome, String rg, String aeronave, String identicacaoAeronautica, String matriculaFuncionario, String[] idiomasFluencia) {
         super(nome, rg, aeronave, identicacaoAeronautica, matriculaFuncionario);
         this.idiomasFluencia = idiomasFluencia;
     }

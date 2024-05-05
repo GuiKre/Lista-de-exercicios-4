@@ -4,11 +4,11 @@ public class Pessoa {
 
     private String nome;
     private String rg;
-    private Aeronave aeronave;
+    private String aeronave;
 
     public Pessoa() {
     }
-    public Pessoa(String nome, String rg, Aeronave aeronave) {
+    public Pessoa(String nome, String rg, String aeronave) {
         this.nome = nome;
         this.rg = rg;
         this.aeronave = aeronave;
@@ -26,10 +26,10 @@ public class Pessoa {
     public void setRg(String rg) {
         this.rg = rg;
     }
-    public Aeronave getAeronave() {
+    public String getAeronave() {
         return aeronave;
     }
-    public void setAeronave(Aeronave aeronave) {
+    public void setAeronave(String aeronave) {
         this.aeronave = aeronave;
     }
 }

@@ -6,7 +6,7 @@ public class Comandante extends Tripulacao{
 
     public Comandante() {
     }
-    public Comandante(String nome, String rg, Aeronave aeronave, String identicacaoAeronautica, String matriculaFuncionario, int totalHorasVoo) {
+    public Comandante(String nome, String rg, String aeronave, String identicacaoAeronautica, String matriculaFuncionario, int totalHorasVoo) {
         super(nome, rg, aeronave, identicacaoAeronautica, matriculaFuncionario);
         this.totalHorasVoo = totalHorasVoo;
     }
