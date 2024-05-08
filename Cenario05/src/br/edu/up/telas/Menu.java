@@ -57,7 +57,7 @@ public class Menu {
                 break;
             case 4:
                 gerirEvento.excluirEvento();
-                executarMenuEventos();
+
                 break;
             default:
                 System.out.println("Valor inválido");

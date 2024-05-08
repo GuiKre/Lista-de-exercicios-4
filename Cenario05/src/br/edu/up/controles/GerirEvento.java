@@ -89,7 +89,7 @@ public class GerirEvento {
     }
 
     public void excluirEvento(){
-        System.out.println("Digite o nome do evento que deseja excluir: ");
+        System.out.println("Digite o nome do evento que deseja excluir: ");        
         String nomeExclusao = leitor.nextLine();
         if(evento.getNome() == nomeExclusao){
             System.out.println("Tem certeza que deseja excluir este evento?\n(1) Sim (2) Não");
