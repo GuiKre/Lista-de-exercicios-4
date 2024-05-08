@@ -48,12 +48,16 @@ public class Menu {
                 executarMenuEventos();
                 break;
             case 2:
+                gerirEvento.alterarEvento();
+                executarMenuEventos();
                 break;
             case 3:
                 gerirEvento.listarEventos();
                 executarMenuEventos();
                 break;
             case 4:
+                gerirEvento.excluirEvento();
+                executarMenuEventos();
                 break;
             default:
                 System.out.println("Valor inválido");
