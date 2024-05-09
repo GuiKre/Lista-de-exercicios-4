@@ -1,10 +1,14 @@
 package br.edu.up.telas;
 import java.util.Scanner;
 import br.edu.up.controles.GerirEvento;
+import br.edu.up.controles.GerirReserva;
+import br.edu.up.modelos.Reserva;
 
 public class Menu {
     
     Scanner leitor = new Scanner(System.in);
+    GerirEvento gerirEvento = new GerirEvento();
+    GerirReserva gerirReserva = new GerirReserva();
     int opcao = 0;
     
     public void executarMenu(){
@@ -30,7 +34,6 @@ public class Menu {
         }
         
     }
-    GerirEvento gerirEvento = new GerirEvento();
     public void executarMenuEventos(){
 
         System.out.println("\n---Menu Eventos---");
@@ -39,6 +42,7 @@ public class Menu {
         System.out.println("2. Alterar evento");
         System.out.println("3. Listar eventos");
         System.out.println("4. Excluir evento");
+        System.out.println("5. Voltar");
         opcao = leitor.nextInt();
         System.out.println("");
 
@@ -57,8 +61,10 @@ public class Menu {
                 break;
             case 4:
                 gerirEvento.excluirEvento();
-
+                executarMenuEventos();
                 break;
+            case 5:
+                executarMenu();
             default:
                 System.out.println("Valor inválido");
                 executarMenuEventos();
@@ -73,16 +79,21 @@ public class Menu {
         System.out.println("2. Alterar reserva");
         System.out.println("3. Listar reservas");
         System.out.println("4. Excluir reserva");
+        System.out.println("5. Voltar");
         opcao = leitor.nextInt();
 
         switch (opcao) {
             case 1:
+                gerirReserva.incluirReserva();
                 break;
             case 2:
                 break;
             case 3:
                 break;
             case 4:
+                break;
+            case 5:
+                executarMenu();
                 break;
         
             default:
