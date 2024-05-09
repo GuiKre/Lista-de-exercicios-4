@@ -2,7 +2,6 @@ package br.edu.up.telas;
 import java.util.Scanner;
 import br.edu.up.controles.GerirEvento;
 import br.edu.up.controles.GerirReserva;
-import br.edu.up.modelos.Reserva;
 
 public class Menu {
     
@@ -85,10 +84,13 @@ public class Menu {
         switch (opcao) {
             case 1:
                 gerirReserva.incluirReserva();
+                executarMenuReservas();
                 break;
             case 2:
                 break;
             case 3:
+                gerirReserva.listarReserva();
+                executarMenuReservas();
                 break;
             case 4:
                 break;

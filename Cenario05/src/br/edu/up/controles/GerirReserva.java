@@ -36,12 +36,9 @@ public class GerirReserva {
         for(Reserva reserva : reservas){
             System.out.println("Nome do Responsável: " + reserva.getNomeResponsavel() +
             "\nQuantidade de pessoas: " + reserva.getQtdPessoas() +
-            "\nNome do evento: " + reserva.getEvento());
-            // "\nData: " + reserva.getData() +
-            // "\nLocal: " + reserva.getLocal() +
-            // "\nLotação máxima: " + reserva.getLotacaoMaxima() +
-            // "\nIngressos vendidos: " + reserva.getIngressosVendidos() + 
-            // "\nPreco do ingresso: R$" + reserva.getPrecoIngresso());
+            "\nNome do evento: " + reserva.getEvento().getNome() +
+            "\nData: " + reserva.getDataReserva() +
+            "\nValor total: " + reserva.getValorTotal());
         }
     }
 
