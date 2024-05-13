@@ -22,7 +22,7 @@ public class Comercial extends Contato {
 
     @Override
     public String toString() {
-        return super.toString() + "Comercial [cnpj=" + cnpj + "]";
+        return super.toString() + ", CNPJ: " + cnpj;
     }
 
 }

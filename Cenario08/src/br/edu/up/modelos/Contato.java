@@ -35,6 +35,6 @@ public abstract class Contato {
 
     @Override
     public String toString() {
-        return "Contato [codigo=" + codigo + ", nome=" + nome + ", telefone=" + telefone + "]";
+        return "Código: " + codigo + ", nome: " + nome + ", telefone: " + telefone;
     }
 }

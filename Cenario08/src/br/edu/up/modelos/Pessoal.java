@@ -22,6 +22,6 @@ public class Pessoal extends Contato {
 
     @Override
     public String toString() {
-        return super.toString() + "Pessoal [aniversario=" + aniversario + "]";
+        return super.toString() + ", Aniversário: " + aniversario;
     }
 }

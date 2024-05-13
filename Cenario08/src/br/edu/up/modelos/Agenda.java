@@ -2,10 +2,9 @@ package br.edu.up.modelos;
 import java.util.List;
 import java.util.ArrayList;
 
-
 public class Agenda {
 
-    private List<Contato> contatos;
+    private List<Contato> contatos = new ArrayList<>();
 
     public void adicionar(Contato contato){
         contatos.add(contato);
