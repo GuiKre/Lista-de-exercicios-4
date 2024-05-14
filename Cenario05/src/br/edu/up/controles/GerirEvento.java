@@ -22,6 +22,7 @@ public class GerirEvento {
         evento.setPrecoIngresso(Prompt.lerDecimal("Digite o preço do ingresso: "));
 
         eventos.add(evento);
+        
     }
 
     public void alterarEvento(){
