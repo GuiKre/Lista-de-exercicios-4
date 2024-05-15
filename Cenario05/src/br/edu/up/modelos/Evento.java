@@ -56,5 +56,5 @@ public class Evento {
     }
     public void setPrecoIngresso(double precoIngresso) {
         this.precoIngresso = precoIngresso;
-    }    
+    }
 }

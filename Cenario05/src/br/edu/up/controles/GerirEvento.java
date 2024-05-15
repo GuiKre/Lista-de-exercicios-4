@@ -1,13 +1,14 @@
 package br.edu.up.controles;
-import br.edu.up.modelos.*;
-import java.util.ArrayList;
 import br.edu.up.Prompt;
+import br.edu.up.modelos.*;
 
 public class GerirEvento {
 
     Evento evento = new Evento();
-    private ArrayList<Evento> eventos = new ArrayList<>(); 
+    Evento[] eventos = new Evento[10];
+    int c = 0;
     public void incluirEvento(){
+        
         
         evento.setNome(Prompt.lerLinha("Digite o nome do evento: "));
 
@@ -21,15 +22,14 @@ public class GerirEvento {
 
         evento.setPrecoIngresso(Prompt.lerDecimal("Digite o preço do ingresso: "));
 
-        eventos.add(evento);
-        
+        eventos[c] = evento;
+        c++;
     }
-
+    
     public void alterarEvento(){
 
         String nomeAlteracao = Prompt.lerLinha("Digite o nome do evento que deseja alterar: ");
-        for (int i = 0; i < eventos.size(); i++) {
-            Evento eventoAlteracao = eventos.get(i);
+        for (Evento eventoAlteracao : eventos) {
             if(eventoAlteracao.getNome().equalsIgnoreCase(nomeAlteracao)){
                 int op = Prompt.lerInteiro("Digite qual informação do evento deseja alterar: \n(1) Nome\n(2) Data\n(3) Local\n(4) Lotação Máxima\n(5) Ingressos Vendidos\n(6) Preço do Ingresso");
                 switch (op) {
@@ -65,24 +65,19 @@ public class GerirEvento {
 
     public void listarEventos(){
         System.out.println("---Eventos---");
-        for(Evento evento : eventos){
-            System.out.println("Nome: " + evento.getNome() +
-            "\nData: " + evento.getData() +
-            "\nLocal: " + evento.getLocal() +
-            "\nLotação máxima: " + evento.getLotacaoMaxima() +
-            "\nIngressos vendidos: " + evento.getIngressosVendidos() + 
-            "\nPreco do ingresso: R$" + evento.getPrecoIngresso());
+        for (Evento evento1 : eventos) {
+            System.out.println("Nome: " + evento1.getNome() + "\nData: " + evento1.getData() + "\nLocal: " + evento1.getLocal() + "\nLotação máxima: " + evento1.getLotacaoMaxima() + "\nIngressos vendidos: " + evento1.getIngressosVendidos() + "\nPreco do ingresso: R$" + evento1.getPrecoIngresso());
         }
     }
 
     public void excluirEvento(){     
         String nomeExclusao = Prompt.lerLinha("Digite o nome do evento que deseja excluir: ");
-        for (int i = 0; i < eventos.size(); i++) {
-            Evento exclusaoEvento = eventos.get(i);
+        for (int i = 0; i < eventos.length; i++) {
+            Evento exclusaoEvento = eventos[i];
             if(exclusaoEvento.getNome().equalsIgnoreCase(nomeExclusao)){
             int op = Prompt.lerInteiro("Tem certeza que deseja excluir este evento?\n(1) Sim (2) Não");
                 if (op == 1) {
-                    eventos.remove(i);
+                    eventos[i] = null;
                     System.out.println("Evento excluído com sucesso.");
                 }
                 else{
@@ -95,7 +90,7 @@ public class GerirEvento {
         }
     }
 
-    public ArrayList<Evento> getEventos() {
+    public Evento[] getEventos(){
         return eventos;
     }
 
