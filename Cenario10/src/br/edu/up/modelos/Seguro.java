@@ -2,18 +2,19 @@ package br.edu.up.modelos;
 
 import java.time.LocalDate;
 
-public class Seguro {
+public abstract class Seguro {
 
     private String apolice;
-    private Segurado Segurado;
+    private Segurado segurado;
     private Double vlrApolice;
     private LocalDate dtaInicio;
     private LocalDate dtaFim;
+
     public Seguro() {
     }
     public Seguro(String apolice, br.edu.up.modelos.Segurado segurado, Double vlrApolice, LocalDate dtaInicio, LocalDate dtaFim) {
         this.apolice = apolice;
-        Segurado = segurado;
+        this.segurado = segurado;
         this.vlrApolice = vlrApolice;
         this.dtaInicio = dtaInicio;
         this.dtaFim = dtaFim;
@@ -26,10 +27,10 @@ public class Seguro {
         this.apolice = apolice;
     }
     public Segurado getSegurado() {
-        return Segurado;
+        return segurado;
     }
     public void setSegurado(Segurado segurado) {
-        Segurado = segurado;
+        this.segurado = segurado;
     }
     public Double getVlrApolice() {
         return vlrApolice;
@@ -50,5 +51,6 @@ public class Seguro {
         this.dtaFim = dtaFim;
     }
 
+    public abstract String getDados();
  
 }

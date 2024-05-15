@@ -5,15 +5,15 @@ public class Segurado {
     private String nome;
     private String rg;
     private String cpf;
-    private Enum sexo;
+    private Sexo sexo;
     private String telefone;
     private String endereco;
     private String cep;
-    private String Cidade;
+    private String cidade;
     
     public Segurado() {
     }
-    public Segurado(String nome, String rg, String cpf, Enum sexo, String telefone, String endereco, String cep,
+    public Segurado(String nome, String rg, String cpf, Sexo sexo, String telefone, String endereco, String cep,
             String cidade) {
         this.nome = nome;
         this.rg = rg;
@@ -22,7 +22,7 @@ public class Segurado {
         this.telefone = telefone;
         this.endereco = endereco;
         this.cep = cep;
-        Cidade = cidade;
+        this.cidade = cidade;
     }
 
     public String getNome() {
@@ -43,10 +43,10 @@ public class Segurado {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    public Enum getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
-    public void setSexo(Enum sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
     public String getTelefone() {
@@ -68,9 +68,26 @@ public class Segurado {
         this.cep = cep;
     }
     public String getCidade() {
-        return Cidade;
+        return cidade;
     }
     public void setCidade(String cidade) {
-        Cidade = cidade;
+        this.cidade = cidade;
+    }
+
+    public String toString(){
+        return "Segurado{" +
+                "nome='" + nome + '\'' +
+                ", RG='" + rg + '\'' +
+                ", CPF='" + cpf + '\'' +
+                ", sexo=" + sexo +
+                ", telefone='" + telefone + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", CEP='" + cep + '\'' +
+                ", cidade='" + cidade + '\'' +
+                '}';
+    }
+
+    public enum Sexo{
+        MASCULINO, FEMININO
     }
 }

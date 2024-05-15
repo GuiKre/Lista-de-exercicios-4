@@ -1,6 +1,6 @@
 package br.edu.up.modelos;
 
-public class SeguroVeiculo {
+public class SeguroVeiculo extends Seguro {
 
     private Double vlrFranquia;
     private boolean temCarroReserva;
@@ -25,5 +25,18 @@ public class SeguroVeiculo {
         this.cobreVidros = cobreVidros;
     }
 
+    @Override
+    public String getDados() {
+        return "SeguroVeiculo{" +
+                "apolice='" + getApolice() + '\'' +
+                ", segurado=" + getSegurado() +
+                ", vlrApolice=" + getVlrApolice() +
+                ", dtaInicio=" + getDtaInicio() +
+                ", dtaFim=" + getDtaFim() +
+                ", vlrFranquia=" + vlrFranquia +
+                ", temCarroReserva=" + temCarroReserva +
+                ", cobreVidros=" + cobreVidros +
+                '}';
+    }
     
 }

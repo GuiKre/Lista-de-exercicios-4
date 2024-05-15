@@ -23,4 +23,27 @@ public class MenuApolice {
         return scanner.nextInt();
     }
 
+    public void exibirMensagem(String mensagem) {
+        System.out.println(mensagem);
+    }
+
+    public String lerEntrada(String dados) {
+        System.out.print(dados);
+        return scanner.next();
+    }
+
+    public int lerInteiro(String dados) {
+        System.out.print(dados);
+        return scanner.nextInt();
+    }
+
+    public double lerDouble(String dados) {
+        System.out.print(dados);
+        return scanner.nextDouble();
+    }
+
+    public boolean lerBoolean(String dados) {
+        System.out.print(dados + " (true/false): ");
+        return scanner.nextBoolean();
+    }
 }
